@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_where_buy_where_buys",
+  "info": {
+    "name": "whereBuy",
+    "icon": "ambulance"
+  },
+  "options": {},
+  "attributes": {
+    "whereBuyTitle": {
+      "type": "string"
+    },
+    "whereBuyOnline": {
+      "type": "string"
+    },
+    "whereBuyLocal": {
+      "type": "string"
+    }
+  }
+}

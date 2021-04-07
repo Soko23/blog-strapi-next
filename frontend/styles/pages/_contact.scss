@@ -1,0 +1,194 @@
+.contact-page {
+    margin-top: autoSize(85);
+    padding: autoSize(146) 0 autoSize(117) 0;
+    display: grid;
+    grid-template-columns: $sideSpace 7fr 5fr $sideSpace;
+    position: relative;
+
+    @include media {
+        margin-top: autoSize(123, $mobileViewport);
+        grid-template-columns: $sideSpaceMobile auto $sideSpaceMobile;
+        padding: 12vw 0 16vw 0;
+    }
+}
+
+.contact-page-bg-item {
+    position: absolute;
+    right: 0;
+    bottom: -3vw;
+    width: autoSize(281);
+
+    @include media {
+        top: 60vw;
+        width: autoSize(257, $mobileViewport);
+    }
+}
+
+.contact-page-col-1 {
+    grid-column: 2;
+    background-color: $blue2;
+    padding: autoSize(100) autoSize(80);
+    border-radius: autoSize(100) 0;
+    margin-right: autoSize(29);
+
+    @include media {
+        padding: autoSize(98, $mobileViewport) autoSize(186, $mobileViewport);
+        border-radius: 11vw 0;
+    }
+}
+
+.contact-page-col-2 {
+    margin-left: autoSize(29);
+    align-self: center;
+
+    @include media {
+        grid-column: 2;
+        margin-top: autoSize(130, $mobileViewport);
+        padding: 0 1vw;
+    }
+
+    h2 {
+        @include font($fontMedium, $fontWeightBold, $blue4, $mainFont, 1.4);
+        margin-bottom: 2vw;
+
+        @include media {
+            font-size: $fontXXMediumMobile;
+        }
+    }
+
+    p {
+        @include font($fontMedium, $fontWeightRegular, $blue4, $mainFont, 1.4);
+
+        @include media {
+            font-size: $fontXXMediumMobile;
+        }
+
+        a {
+            @include font($fontMedium, $fontWeightBold, $blue4, $mainFont, 1.4);
+            text-decoration: none;
+
+            @include media {
+                font-size: $fontXXMediumMobile;
+            }
+
+            &.underline {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.contact-page-header {
+    @include font($fontMedium, $fontWeightBold, $blue4);
+
+    @include media {
+        font-size: $fontXXMediumMobile;
+        line-height: 1.3;
+    }
+}
+
+.contact-page-address {
+    margin-top: 2vw;
+    @include font($fontMedium, $fontWeightRegular, $blue4);
+    font-style: normal;
+
+    @include media {
+        font-size: $fontXXMediumMobile;
+        margin-top: 4vw;
+    }
+}
+
+.contact-page-street {
+    line-height: 1.4;
+}
+
+.contact-page-phone,
+.contact-page-email {
+    display: flex;
+    align-items: center;
+    line-height: 1.4;
+    @include font($fontMedium, $fontWeightRegular, $blue4);
+
+    @include media {
+        font-size: $fontXXMediumMobile;
+    }
+}
+
+.contact-page-phone {
+    margin-top: 3vw;
+    text-decoration: none;
+
+    @include media {
+        margin-top: 5vw;
+    }
+
+    &::before {
+        content: '';
+        background-image: url('../../public/images/phone-ico.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: autoSize(29);
+        height: autoSize(35);
+        margin-right: autoSize(23);
+
+        @include media {
+            width: autoSize(42, $mobileViewport);
+            height: autoSize(52, $mobileViewport);
+            margin-right: autoSize(25, $mobileViewport);
+        }
+    }
+}
+
+.contact-page-email {
+    margin-top: autoSize(19);
+
+    @include media {
+        margin-top: 3vw;
+    }
+
+    &::before {
+        content: '';
+        background-image: url('../../public/images/email-ico.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: autoSize(35);
+        height: autoSize(23);
+        margin-right: autoSize(17);
+
+        @include media {
+            width: autoSize(51, $mobileViewport);
+            height: autoSize(35, $mobileViewport);
+            margin-right: autoSize(20, $mobileViewport);
+        }
+    }
+}
+
+.contact-page-header-2 {
+    @include font($fontMedium, $fontWeightBold, $blue4, $mainFont, 1.4);
+    margin-bottom: 2vw;
+
+    @include media {
+        font-size: $fontXXMediumMobile;
+    }
+}
+
+.contact-page-info {
+    @include font($fontMedium, $fontWeightRegular, $blue4, $mainFont, 1.4);
+
+    @include media {
+        font-size: $fontXXMediumMobile;
+    }
+
+    .contact-page-accent {
+        @include font($fontMedium, $fontWeightBold, $blue4, $mainFont, 1.4);
+        text-decoration: none;
+
+        @include media {
+            font-size: $fontXXMediumMobile;
+        }
+
+        &.underline {
+            text-decoration: underline;
+        }
+    }
+}

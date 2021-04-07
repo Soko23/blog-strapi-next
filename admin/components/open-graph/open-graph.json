@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_open_graph_open_graphs",
+  "info": {
+    "name": "openGraph",
+    "icon": "allergies"
+  },
+  "options": {},
+  "attributes": {
+    "ogImage": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "ogTitle": {
+      "type": "string"
+    },
+    "ogDescription": {
+      "type": "text"
+    }
+  }
+}

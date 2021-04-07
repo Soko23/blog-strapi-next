@@ -1,0 +1,39 @@
+{
+  "collectionName": "components_section1_section1s",
+  "info": {
+    "name": "section1",
+    "icon": "align-center",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "section1Title": {
+      "type": "richtext"
+    },
+    "section1Image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "section1List": {
+      "type": "component",
+      "repeatable": true,
+      "component": "section-1-list.section1-list"
+    },
+    "section1ImageMobile": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}

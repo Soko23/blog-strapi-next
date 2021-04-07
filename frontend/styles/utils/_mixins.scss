@@ -1,0 +1,44 @@
+/**
+*   Function to set size in vw from px value.
+*   Defalut full viewport width: 1920, if want change to mobile set value in function parameter  
+*/
+@function autoSize($size, $fullViewport: 1920) {
+    $size: $size / 1;
+    $result: inspect(($size * 100) / $fullViewport);
+    $result: $result;
+    @return $result + 'vw';
+}
+
+@mixin font($size, $weight, $color, $family: $mainFont, $lineHeight: 1) {
+    font-family: $family;
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+    line-height: $lineHeight;
+}
+
+@mixin customButton($backgroundColor, $fontColor, $fontSize, $borderColor, $height, $width) {
+    width: autoSize($width);
+    height: autoSize($height);
+    text-transform: uppercase;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 45px;
+    background-color: $backgroundColor;
+    color: $fontColor;
+    font-size: $fontSize;
+    font-weight: $fontWeightBold;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+
+@mixin media {
+    @media (max-width: $breakpoint) {
+        @content;
+    }
+}

@@ -1,0 +1,41 @@
+{
+  "collectionName": "components_which_contains_section_which_contains",
+  "info": {
+    "name": "sectionWhichContains",
+    "icon": "adjust",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "paragraph": {
+      "type": "string"
+    },
+    "whichContainsSlider": {
+      "type": "component",
+      "repeatable": true,
+      "component": "which-contains-slider.which-contains-slider"
+    },
+    "sectionWhichContainsLeaflet": {
+      "type": "component",
+      "repeatable": false,
+      "component": "section-which-contains-leaflet.section-which-contains-leaflet"
+    }
+  }
+}

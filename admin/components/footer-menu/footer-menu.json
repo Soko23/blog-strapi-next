@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_footer_menu_footer_menus",
+  "info": {
+    "name": "footerMenu",
+    "icon": "align-justify"
+  },
+  "options": {},
+  "attributes": {
+    "footerMenuItem": {
+      "type": "component",
+      "repeatable": true,
+      "component": "footer-menu-item.footer-menu-item"
+    }
+  }
+}

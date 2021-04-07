@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_item_items",
+  "info": {
+    "name": "item",
+    "icon": "address-card",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "displayName": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "string",
+      "required": true
+    },
+    "class": {
+      "type": "string"
+    }
+  }
+}

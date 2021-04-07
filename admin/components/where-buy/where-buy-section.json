@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_where_buy_where_buy_sections",
+  "info": {
+    "name": "whereBuySection",
+    "icon": "archway"
+  },
+  "options": {},
+  "attributes": {
+    "whereBuyTitle": {
+      "type": "string"
+    },
+    "whereBuyOnline": {
+      "type": "string"
+    },
+    "whereBuyLocal": {
+      "type": "string"
+    }
+  }
+}

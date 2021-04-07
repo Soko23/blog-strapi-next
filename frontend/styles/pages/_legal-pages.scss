@@ -1,0 +1,84 @@
+.legal-page {
+    margin-top: autoSize(85);
+    padding: autoSize(93) 0 autoSize(125) 0;
+    display: grid;
+    grid-template-columns: $sideSpace auto $sideSpace;
+
+    @include media {
+        margin-top: 18vw;
+        grid-template-columns: $sideSpaceMobile auto $sideSpaceMobile;
+    }
+}
+
+.legal-page-content {
+    grid-column: 2;
+
+    .legal-page-header {
+        @include font($fontXXMedium, $fontWeightBold, $blue4, $mainFont, 1.4);
+        margin-bottom: 2vw;
+
+        @include media {
+            font-size: $fontXXMediumMobile;
+        }
+    }
+
+    h2 {
+        @include font($fontMedium, $fontWeightBold, $blue4, $mainFont, 1.4);
+        margin-top: autoSize(25);
+
+        @include media {
+            font-size: $fontMediumMobile;
+        }
+    }
+
+    p,
+    a {
+        @include font($fontMedium, $fontWeightRegular, $blue4, $mainFont, 1.4);
+
+        @include media {
+            font-size: $fontMediumMobile;
+        }
+    }
+
+    ul,
+    ol {
+        list-style-position: inside;
+        @include font($fontMedium, $fontWeightRegular, $blue4, $mainFont, 1.4);
+
+        @include media {
+            font-size: $fontMediumMobile;
+        }
+    }
+
+    .deactivate-analytics-btn {
+        @include customButton(transparent, $blue3, $fontMedium, $blue3, 73, 442);
+        margin: 2vw 0;
+        cursor: pointer;
+
+        @include media {
+            font-size: 2.6vw;
+            width: 53vw;
+            height: 9vw;
+            margin: 3vw 0;
+        }
+    }
+
+    table {
+        border-collapse: collapse;
+    }
+
+    td {
+        border: 1px solid $blue4;
+        padding: 1vw;
+        @include font($fontMedium, $fontWeightRegular, $blue4, $mainFont, 1.4);
+
+        @include media {
+            font-size: $fontMediumMobile;
+        }
+    }
+
+    .has-text-align-center {
+        text-align: center;
+    }
+}
+

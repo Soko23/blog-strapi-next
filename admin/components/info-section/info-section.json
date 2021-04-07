@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_info_section_info_sections",
+  "info": {
+    "name": "infoSection",
+    "icon": "align-left"
+  },
+  "options": {},
+  "attributes": {
+    "info": {
+      "type": "richtext"
+    }
+  }
+}

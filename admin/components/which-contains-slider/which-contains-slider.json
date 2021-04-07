@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_which_contains_slider_which_contains_sliders",
+  "info": {
+    "name": "whichContainsSlider",
+    "icon": "american-sign-language-interpreting"
+  },
+  "options": {},
+  "attributes": {
+    "slideImage": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "slideTitle": {
+      "type": "string"
+    }
+  }
+}

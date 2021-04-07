@@ -1,0 +1,18 @@
+@import 'base/reset';
+@import 'base/typography';
+
+@import 'utils/variables';
+@import 'utils/mixins';
+
+@import 'base/settings';
+
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/cookies-modal';
+
+@import 'pages/index';
+@import 'pages/contact';
+@import 'pages/legal-pages';
+@import 'pages/404';
+@import 'pages/blog-page';
+@import 'pages/blog-post';

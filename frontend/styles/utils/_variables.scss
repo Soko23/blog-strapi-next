@@ -1,0 +1,48 @@
+/**
+* Font family
+*/
+$mainFont: 'Open Sans', sans-serif;
+
+/**
+* Font sizes
+*/
+$fontXXLarge: 6.25vw; //12px
+$fontXLarge: 2.6vw; //50px
+$fontLarge: 2.4vw; //46px
+$fontXXMedium: 2.08vw; //40px
+$fontXMedium: 1.56vw; //30px
+$fontMedium: 1.15vw; //22px
+$fontXSmall: .83vw; //16px
+$fontSmall: .63vw; //12px
+
+$fontXXLargeMobile: 8.79vw; //90px
+$fontXLargeMobile: 7.03vw; //72px
+$fontLargeMobile: 4.3vw; //44px
+$fontXXMediumMobile: 3.91vw; //40px
+$fontXMediumMobile: 3.13vw; //32px
+$fontMediumMobile: 2.54vw; //26px
+
+/**
+* Font weights
+*/
+$fontWeightRegular: 400;
+$fontWeightBold: 700;
+
+/**
+* Colors
+*/
+$light: #fff;
+$blue1: #EBF7FB;
+$blue2: #D6EFF7;
+$blue3: #006EA2;
+$blue4: #155D7B;
+$grey: #00000029;
+
+$sideSpace: 19.53vw; //375px
+$sideSpaceMobile: 8.2vw; //84px
+$breakpoint: 1023px;
+
+/**
+*   Use to autoSize() for mobile
+**/
+$mobileViewport: 1024;

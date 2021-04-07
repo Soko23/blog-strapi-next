@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_section_which_contains_leaflet_section_which_contains_leaflets",
+  "info": {
+    "name": "sectionWhichContainsLeaflet",
+    "icon": "audio-description"
+  },
+  "options": {},
+  "attributes": {
+    "content": {
+      "type": "string"
+    },
+    "file": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files"
+      ],
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}

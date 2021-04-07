@@ -1,0 +1,152 @@
+.footer-content {
+    display: grid;
+    grid-template-columns: $sideSpace repeat(3, 4fr) $sideSpace;
+    align-items: center;
+    border-top: 2px solid $blue2;
+    padding: autoSize(40) 0;
+
+    @include media {
+        grid-template-columns: $sideSpaceMobile auto $sideSpaceMobile;
+        justify-items: center;
+        padding: autoSize(82, $mobileViewport) 0 autoSize(77, $mobileViewport) 0;
+    }
+}
+
+.footer-content-inner-1 {
+    grid-column: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-copyright,
+.footer-executive {
+    @include font($fontSmall, $fontWeightRegular, $blue4);
+
+    @include media {
+        font-size: $fontXMediumMobile;
+        text-align: center;
+    }
+}
+
+.footer-executive {
+    display: flex;
+    align-items: center;
+    margin-top: autoSize(12);
+    text-decoration: none;
+
+    @include media {
+        display: none;
+    }
+
+    .footer-kamikaze-logo {
+        margin-left: autoSize(10);
+        width: autoSize(134);
+        height: autoSize(31);
+    }
+}
+
+.footer-content-inner-2 {
+    justify-self: center;
+
+    @include media {
+        grid-column: 2;
+        margin-top: autoSize(62, $mobileViewport);
+    }
+
+    .company-logo {
+        width: autoSize(200);
+        height: autoSize(72);
+        display: block;
+
+        @include media {
+            width: autoSize(438, $mobileViewport);
+            height: autoSize(158, $mobileViewport);
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+.footer-content-inner-3 {
+    justify-self: end;
+
+    @include media {
+        grid-column: 2;
+        justify-self: center;
+    }
+}
+
+.footer-menu-list {
+    list-style: none;
+    width: 12vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+
+    @include media {
+        justify-content: center;
+        align-items: baseline;
+        width: 95%;
+        margin: autoSize(54, $mobileViewport) auto 0 auto;
+    }
+
+    .menu-item {
+        line-height: 1.3;
+
+        @include media {
+            line-height: 1.4;
+        }
+
+        a {
+            @include font($fontSmall, $fontWeightRegular, $blue4);
+            text-decoration: none;
+
+            @include media {
+                font-size: $fontXMediumMobile;
+            }
+        }
+
+        &:nth-of-type(1) {
+            &::after {
+                content: '|';
+                font-size: $fontSmall;
+                color: $blue4;
+                margin: 0 0.5vw;
+
+                @include media {
+                    font-size: $fontXMediumMobile;
+                    margin: 0 1vw;
+                }
+            }
+        }
+    }
+}
+
+.footer-content-inner-4 {
+    display: none;
+
+    @include media {
+        display: block;
+        grid-column: 2;
+    }
+
+    .footer-executive-mobile {
+        @include media {
+            display: flex;
+            align-items: center;
+            margin-top: autoSize(64, $mobileViewport);
+            text-decoration: none;
+            @include font($fontXMediumMobile, $fontWeightRegular, $blue4);
+        }
+
+        .footer-kamikaze-logo-mobile {
+            @include media {
+                margin-left: 3vw;
+                width: autoSize(382, $mobileViewport);
+            }
+        }
+    }
+}

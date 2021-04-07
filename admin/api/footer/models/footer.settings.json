@@ -1,0 +1,36 @@
+{
+  "kind": "singleType",
+  "collectionName": "footers",
+  "info": {
+    "name": "Footer",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "copyright": {
+      "type": "string"
+    },
+    "author": {
+      "type": "component",
+      "repeatable": false,
+      "component": "author.author"
+    },
+    "companyLogo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "company-logo.company-logo"
+    },
+    "footerMenu": {
+      "type": "component",
+      "repeatable": false,
+      "component": "footer-menu.footer-menu"
+    },
+    "legal_page": {
+      "model": "legal-page"
+    }
+  }
+}

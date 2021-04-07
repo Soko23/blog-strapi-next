@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_footer_menu_item_footer_menu_items",
+  "info": {
+    "name": "footerMenuItem",
+    "icon": "align-right"
+  },
+  "options": {},
+  "attributes": {
+    "displayName": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "kind": "singleType",
+  "collectionName": "cookies",
+  "info": {
+    "name": "Cookies"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "cookiesText": {
+      "type": "richtext"
+    }
+  }
+}

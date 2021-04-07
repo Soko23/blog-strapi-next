@@ -1,0 +1,242 @@
+.header {
+    display: grid;
+    grid-template-columns: $sideSpace auto auto $sideSpace;
+    height: autoSize(85);
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color: $light;
+    z-index: 999;
+
+    @include media {
+        height: autoSize(123, $mobileViewport);
+        grid-template-columns: $sideSpaceMobile auto auto $sideSpaceMobile;
+    }
+}
+
+.header-logo {
+    grid-column: 2;
+    width: autoSize(249);
+    height: autoSize(108);
+
+    @include media {
+        width: autoSize(358, $mobileViewport);
+        height: auto;
+    }
+
+    img {
+        width: 100%;
+    }
+}
+
+.nav {
+    grid-column: 3;
+    justify-self: end;
+
+    @include media {
+        transform: translateY(-100%);
+        transition: all 0.3s ease-in-out;
+        position: fixed;
+        width: 100%;
+        border-radius: 0 0 7vw 7vw;
+    }
+
+    .menu-list {
+        @include media {
+            flex-direction: column;
+            align-items: center;
+            width: 50%;
+            margin: 0 auto;
+
+            .menu-item {
+                text-align: center;
+                margin: 0;
+                padding: autoSize(53, $mobileViewport) 0;
+                width: 100%;
+
+                &:not(.nav-where-to-buy) {
+                    border-bottom: 2px solid #c5e9f4;
+                }
+
+                a {
+                    font-size: $fontXXMediumMobile;
+                    justify-content: center;
+                    display: flex;
+                    width: 100%;
+                    height: 100%;
+                }
+
+                &.nav-where-to-buy {
+                    margin-top: autoSize(93, $mobileViewport);
+                    width: autoSize(434, $mobileViewport);
+                    height: autoSize(116, $mobileViewport);
+                    border-radius: 6vw;
+
+                    a {
+                        &::after {
+                            width: autoSize(66, $mobileViewport);
+                            height: autoSize(62, $mobileViewport);
+                            margin-left: 3vw;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @include media {
+        &.opened {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: $light;
+            display: block;
+            padding-top: autoSize(224, $mobileViewport);
+            padding-bottom: autoSize(109, $mobileViewport);
+            transform: translateY(0);
+        }
+    }
+}
+
+.hamburger {
+    display: none;
+
+    @include media {
+        justify-self: end;
+        width: autoSize(56, $mobileViewport);
+        height: autoSize(40, $mobileViewport);
+        margin-top: autoSize(42, $mobileViewport);
+        background: none;
+        border: none;
+        position: relative;
+        display: block;
+        outline: none;
+
+        .hamburger-item {
+            width: 100%;
+            height: 0.6vw;
+            border-radius: 2vw;
+            background-color: $blue4;
+            position: absolute;
+            left: 0;
+            transition: all 0.3s ease-in-out;
+
+            &:nth-of-type(1) {
+                top: 0;
+            }
+
+            &:nth-of-type(2) {
+                top: 50%;
+                transform: translateY(-50%);
+            }
+
+            &:nth-of-type(3) {
+                bottom: 0;
+            }
+        }
+
+        &.opened {
+            .hamburger-item {
+                &:nth-of-type(1) {
+                    top: 50%;
+                    transform: translateY(-50%) rotate(45deg);
+                }
+
+                &:nth-of-type(2) {
+                    transform: translateY(-50%) translateX(100%);
+                    opacity: 0;
+                }
+
+                &:nth-of-type(3) {
+                    top: 50%;
+                    transform: translateY(-50%) rotate(-45deg);
+                }
+            }
+        }
+    }
+}
+
+.menu-list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    height: 79%;
+
+    .menu-item {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        &:not(:last-of-type) {
+            margin-right: autoSize(35);
+
+            &::after {
+                content: '';
+                width: 100%;
+                height: 3px;
+                border-radius: 10px;
+                background-color: $blue3;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                opacity: 0;
+                transition: opacity 0.3s ease-in-out;
+            }
+
+            &:hover,
+            &.active {
+                &::after {
+                    opacity: 1;
+                }
+            }
+        }
+
+        a {
+            @include font($fontXSmall, $fontWeightBold, $blue3);
+            text-decoration: none;
+            text-transform: uppercase;
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+
+        &.nav-where-to-buy {
+            width: autoSize(167);
+            height: autoSize(45);
+            background-color: $blue3;
+            border-radius: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 0.3s ease-in-out;
+
+            a {
+                color: $light;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+
+                &::after {
+                    content: '';
+                    background-image: url('../../public/images/truck.svg');
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    width: autoSize(25);
+                    height: autoSize(24);
+                    display: inline-block;
+                    margin-left: autoSize(7);
+                }
+            }
+
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
+    }
+}

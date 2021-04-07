@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_section_1_list_section1_lists",
+  "info": {
+    "name": "section1List",
+    "icon": "asterisk"
+  },
+  "options": {},
+  "attributes": {
+    "section1ListItemImage": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "section1ListItemText": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_menu_item_menu_items",
+  "info": {
+    "name": "menuItem",
+    "icon": "address-book"
+  },
+  "options": {},
+  "attributes": {
+    "displayName": {
+      "type": "string"
+    },
+    "admin_users": {
+      "plugin": "admin",
+      "collection": "user"
+    }
+  }
+}

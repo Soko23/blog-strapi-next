@@ -1,0 +1,199 @@
+.blog-page {
+    padding-top: autoSize(180);
+    background-image: url('../../public/images/blog-header-1.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    @include media {
+        background-image: url('../../public/images/blog-header-2.png');
+        margin-top: autoSize(123, $mobileViewport);
+        padding-top: autoSize(100, $mobileViewport);
+    }
+}
+
+.blog-page-header {
+    @include font(autoSize(54), $fontWeightBold, $blue4, $mainFont);
+    text-align: center;
+
+    @include media {
+        font-size: $fontXLargeMobile;
+        padding: 0 5vw;
+    }
+}
+
+.posts-list {
+    display: grid;
+    grid-template-columns: $sideSpace auto $sideSpace;
+    margin: autoSize(100) 0;
+
+    @include media {
+        margin: autoSize(105, $mobileViewport) 0;
+        grid-template-columns: 12fr;
+    }
+}
+
+.latest-post {
+    grid-column: 2;
+    display: grid;
+    grid-template-columns: 6fr 6fr;
+    column-gap: autoSize(50);
+
+    @include media {
+        grid-template-columns: 12fr;
+        grid-column: 1/3;
+    }
+}
+
+.latest-post-info-wrapper {
+    padding: 1vw 0;
+
+    @include media {
+        display: flex;
+        flex-direction: column;
+        padding: 0 $sideSpaceMobile;
+        margin-top: autoSize(60, $mobileViewport);
+    }
+}
+
+.latest-post-image {
+    width: 100%;
+}
+
+.latest-post-date {
+    @include font(autoSize(18), $fontWeightRegular, $blue4, $mainFont);
+    display: block;
+    margin-bottom: 0.5vw;
+
+    @include media {
+        font-size: autoSize(28, $mobileViewport);
+    }
+}
+
+.latest-post-title {
+    text-decoration: none;
+    h2 {
+        @include font(autoSize(36), $fontWeightBold, $blue4, $mainFont, 1.3);
+        margin-bottom: 1vw;
+
+        @include media {
+            font-size: $fontXLargeMobile;
+        }
+    }
+}
+
+.latest-post-excerpt {
+    p {
+        @include font($fontMedium, $fontWeightRegular, $blue4, $mainFont, 1.3);
+
+        @include media {
+            font-size: autoSize(38, $mobileViewport);
+        }
+    }
+}
+
+.latest-post-button {
+    @include customButton($blue3, $light, $fontXSmall, $blue2, 70, 180);
+    margin-top: 2vw;
+
+    @include media {
+        width: autoSize(386, $mobileViewport);
+        height: autoSize(127, $mobileViewport);
+        font-size: autoSize(35, $mobileViewport);
+        margin-top: 5vw;
+    }
+}
+
+.posts-list-last-posts {
+    display: none;
+
+    &::after,
+    &::before {
+        content: '';
+        height: 1px;
+        width: 30%;
+        background-color: $blue2;
+        display: block;
+    }
+
+    @include media {
+        display: block;
+        grid-column: 1/3;
+        margin-top: autoSize(130, $mobileViewport);
+        @include font(autoSize(38, $mobileViewport), $fontWeightRegular, $blue4, $mainFont);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-transform: uppercase;
+    }
+}
+.posts-container {
+    display: grid;
+    grid-template-columns: 4fr 4fr 4fr;
+    grid-column: 2/3;
+    column-gap: autoSize(60);
+    row-gap: autoSize(84);
+    margin-top: autoSize(100);
+
+    @include media {
+        margin-top: autoSize(144, $mobileViewport);
+        grid-template-columns: $sideSpaceMobile auto $sideSpaceMobile;
+        column-gap: 0;
+        row-gap: autoSize(105, $mobileViewport);
+    }
+}
+
+.post-wrapper {
+    @include media {
+        grid-column: 2;
+    }
+}
+
+.blog-post-image {
+    width: 100%;
+}
+
+.blog-post-date {
+    @include font(autoSize(18), $fontWeightRegular, $blue4, $mainFont);
+    margin-top: 1vw;
+    display: block;
+
+    @include media {
+        font-size: autoSize(28, $mobileViewport);
+    }
+}
+
+.blog-post-title {
+    text-decoration: none;
+
+    h3 {
+        @include font($fontXMedium, $fontWeightBold, $blue4, $mainFont, 1.4);
+        margin-top: 0.5vw;
+
+        @include media {
+            font-size: $fontXLargeMobile;
+        }
+    }
+}
+
+.blog-post-excerpt {
+    margin-top: 1vw;
+    p {
+        @include font($fontMedium, $fontWeightRegular, $blue4, $mainFont, 1.4);
+
+        @include media {
+            font-size: autoSize(38, $mobileViewport);
+        }
+    }
+}
+
+.blog-post-button {
+    @include customButton($blue3, $light, $fontXSmall, $blue2, 70, 180);
+    margin-top: 2vw;
+
+    @include media {
+        width: autoSize(386, $mobileViewport);
+        height: autoSize(127, $mobileViewport);
+        font-size: autoSize(35, $mobileViewport);
+        margin-top: 5vw;
+    }
+}

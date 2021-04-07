@@ -1,0 +1,729 @@
+.home-page {
+    margin-top: autoSize(85);
+
+    @include media {
+        margin-top: autoSize(123, $mobileViewport);
+    }
+}
+
+/**
+*   Section intro
+*/
+.section-intro {
+    background-color: $blue2;
+    display: grid;
+    // grid-template-columns: $sideSpace auto auto autoSize(46);
+    grid-template-columns: $sideSpace 1fr 2fr autoSize(46);
+    column-gap: 2vw;
+    padding-top: autoSize(73);
+    padding-bottom: autoSize(67);
+
+    @include media {
+        grid-template-columns: $sideSpaceMobile auto $sideSpaceMobile;
+        padding: autoSize(115, $mobileViewport) 0;
+    }
+}
+
+.section-intro-text-wrapper {
+    grid-column: 2;
+    padding-top: autoSize(45);
+}
+
+.section-intro-image {
+    grid-row: 1/3;
+    grid-column: 3;
+    width: 100%;
+    height: auto;
+
+    @include media {
+        display: none;
+    }
+}
+
+.section-intro-image-mobile {
+    display: none;
+
+    @include media {
+        display: block;
+        width: 100%;
+        margin: autoSize(60, $mobileViewport) 0 autoSize(45, $mobileViewport) 0;
+    }
+}
+
+.section-intro-header {
+    @include font(autoSize(47), $fontWeightBold, $blue4);
+    margin-right: -7vw;
+
+    @include media {
+        font-size: $fontXXLargeMobile;
+        margin: 0;
+        text-align: center;
+    }
+}
+
+.section-intro-paragraph {
+    margin-top: autoSize(55);
+    margin-right: autoSize(-60);
+    @include font($fontMedium, $fontWeightRegular, $blue4, $mainFont, 1.4);
+
+    @include media {
+        font-size: $fontLargeMobile;
+        text-align: center;
+        margin: 0;
+        padding: 0 7vw;
+    }
+}
+
+.section-intro-button {
+    @include customButton($blue3, $light, $fontMedium, $blue3, 73, 290);
+    justify-content: space-between;
+    padding: 0 1.1vw 0 2vw;
+    align-items: center;
+    margin-top: 2vw;
+
+    @include media {
+        width: autoSize(400, $mobileViewport);
+        height: autoSize(121, $mobileViewport);
+        font-size: autoSize(35, $mobileViewport);
+        margin: 4vw auto 0 auto;
+    }
+
+    &::after {
+        content: '';
+        background-image: url('../../public/images/buy-online.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        display: inline-block;
+        width: 2.6vw;
+        height: 2vw;
+
+        @include media {
+            width: 7.1vw;
+            height: 6vw;
+        }
+    }
+}
+
+/**
+*   Section when use
+*/
+.section-when-use {
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: minmax(auto, autoSize(975)) auto $sideSpace;
+    padding: autoSize(86) 0 autoSize(152) 0;
+    position: relative;
+
+    @include media {
+        grid-template-columns: 12fr;
+        justify-content: center;
+        padding: autoSize(70, $mobileViewport) 0 autoSize(93, $mobileViewport) 0;
+    }
+
+    .bg-item {
+        position: absolute;
+        display: block;
+        width: autoSize(292);
+        height: autoSize(436);
+        right: 0;
+        top: -1vw;
+
+        @include media {
+            display: none;
+        }
+    }
+}
+
+.when-use-header-wrapper {
+    grid-column: 1/4;
+    justify-self: center;
+    z-index: 1;
+}
+
+.when-use-header {
+    background-image: url('../../public/images/when-use-header.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: autoSize(489);
+    height: autoSize(327);
+    @include font($fontLarge, $fontWeightBold, $light, $mainFont, 1.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: -5.8vw;
+
+    @include media {
+        font-size: $fontXLargeMobile;
+        width: autoSize(752, $mobileViewport);
+        height: autoSize(500, $mobileViewport);
+        margin-bottom: -13vw;
+    }
+}
+
+.when-use-image {
+    grid-column: 1;
+}
+
+.when-use-image-inner {
+    width: autoSize(975);
+
+    @include media {
+        display: none;
+    }
+}
+
+.when-use-image-inner-mobile {
+    display: none;
+
+    @include media {
+        display: block;
+        width: 100%;
+    }
+}
+
+.when-use-list {
+    grid-column: 2;
+    margin-top: 8vw;
+    margin-left: autoSize(43);
+    list-style: none;
+    @include font($fontMedium, $fontWeightRegular, $blue4, $mainFont, 1.4);
+
+    @include media {
+        grid-column: 1;
+        margin: autoSize(93, $mobileViewport) autoSize(109, $mobileViewport) 0 autoSize(80, $mobileViewport);
+        font-size: $fontXXMediumMobile;
+    }
+}
+
+.when-use-list-item {
+    &:not(:last-of-type) {
+        margin-bottom: autoSize(15);
+
+        @include media {
+            margin-bottom: autoSize(25, $mobileViewport);
+        }
+    }
+}
+
+.when-use-list-item-inner {
+    display: flex;
+    align-items: center;
+
+    .when-use-list-item-image {
+        display: inline-block;
+        width: autoSize(96);
+        height: autoSize(96);
+        margin-right: autoSize(25);
+
+        @include media {
+            min-width: autoSize(177, $mobileViewport);
+            min-height: autoSize(177, $mobileViewport);
+            margin-right: autoSize(57, $mobileViewport);
+        }
+    }
+}
+
+/**
+*   Section where buy
+*/
+.section-where-buy {
+    padding-bottom: autoSize(65);
+    display: flex;
+    justify-content: center;
+}
+
+.where-buy {
+    background-image: url('../../public/images/home-image-8.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: autoSize(1253);
+    height: autoSize(728);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: autoSize(145);
+
+    @include media {
+        background-image: url('../../public/images/home-image-9.png');
+        width: autoSize(1024, $mobileViewport);
+        height: autoSize(1391, $mobileViewport);
+        padding-top: 28vw;
+    }
+}
+
+.where-buy-header {
+    @include font($fontLarge, $fontWeightBold, $blue4, $mainFont, 1.3);
+    width: autoSize(645);
+    margin: 0 auto;
+    text-align: center;
+
+    @include media {
+        font-size: $fontXLargeMobile;
+        width: 55%;
+        line-height: 1.1;
+    }
+}
+
+.where-buy-buttons {
+    margin-top: autoSize(60);
+    display: flex;
+    justify-content: space-between;
+    width: autoSize(645);
+
+    @include media {
+        width: 48%;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 7vw;
+    }
+}
+
+.where-buy-button-online {
+    @include customButton($blue3, $light, $fontMedium, $blue3, 73, 290);
+    justify-content: space-between;
+    padding: 0 1.1vw 0 2vw;
+    align-items: center;
+
+    @include media {
+        padding: 0 4.5vw;
+    }
+
+    &::after {
+        content: '';
+        background-image: url('../../public/images/buy-online.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        display: inline-block;
+        width: 2.6vw;
+        height: 2vw;
+
+        @include media {
+            width: 7.1vw;
+            height: 6vw;
+        }
+    }
+
+    @include media {
+        margin-bottom: autoSize(29, $mobileViewport);
+    }
+}
+
+.where-buy-button-local {
+    @include customButton($blue3, $light, $fontMedium, $blue3, 73, 290);
+    justify-content: space-between;
+    padding: 0 1.1vw 0 2vw;
+    align-items: center;
+
+    @include media {
+        padding: 0 4.5vw;
+    }
+
+    &::after {
+        content: '';
+        background-image: url('../../public/images/buy-local.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        display: inline-block;
+        width: 1.5vw;
+        height: 2vw;
+
+        @include media {
+            width: 4.5vw;
+            height: 6vw;
+        }
+    }
+}
+
+.where-buy-button-online,
+.where-buy-button-local {
+    width: 45%;
+
+    @include media {
+        width: 100%;
+        height: autoSize(121, $mobileViewport);
+        font-size: autoSize(35, $mobileViewport);
+    }
+}
+
+/**
+*   Section which contains
+*/
+.section-which-contains {
+    background-color: rgba(197, 233, 244, 0.25);
+    padding: autoSize(100) 0;
+    display: grid;
+    grid-template-columns: $sideSpace auto $sideSpace;
+
+    @include media {
+        grid-template-columns: $sideSpaceMobile auto $sideSpaceMobile;
+        padding: autoSize(134, $mobileViewport) 0 autoSize(177, $mobileViewport) 0;
+    }
+}
+
+.which-contains-header,
+.which-contains-header-2,
+.which-contains-header-3,
+.which-contains-infographic {
+    grid-column: 2;
+}
+
+.which-contains-header {
+    text-align: center;
+    @include font($fontLarge, $fontWeightBold, $blue4);
+    margin-bottom: autoSize(20);
+
+    @include media {
+        font-size: $fontXLargeMobile;
+        margin-bottom: autoSize(30, $mobileViewport);
+    }
+}
+
+.which-contains-header-2 {
+    text-align: center;
+    @include font($fontMedium, $fontWeightRegular, $blue4, $mainFont, 1.4);
+    margin-bottom: autoSize(40);
+    width: 19vw;
+    margin: 0 auto;
+
+    @include media {
+        font-size: $fontLargeMobile;
+        width: 100%;
+    }
+}
+
+.which-contains-header-3 {
+    text-align: center;
+    @include font($fontMedium, $fontWeightRegular, $blue4, $mainFont, 1.4);
+    margin-bottom: autoSize(40);
+    margin-top: 3vw;
+
+    @include media {
+        font-size: $fontLargeMobile;
+        margin-top: 5vw;
+    }
+}
+
+.which-contains-infographic {
+    width: 100%;
+
+    @include media {
+        display: none;
+    }
+}
+
+.which-contains-slider-container {
+    display: none;
+
+    @include media {
+        display: block;
+    }
+
+    grid-column: 2;
+    width: 100%;
+    margin-top: autoSize(103, $mobileViewport);
+
+    .slider-image {
+        max-width: autoSize(470, $mobileViewport);
+        margin: 0 auto;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .slider-title {
+        text-align: center;
+        @include font(fontXXMediumMobile, $fontWeightBold, $blue4);
+        margin-top: 5vw;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        color: $blue4;
+        top: 38%;
+        width: 4vw;
+        height: 4vw;
+        border-top: 3px solid $blue3;
+        border-right: 3px solid $blue3;
+        background: none;
+        outline: none;
+        position: absolute;
+        z-index: 11;
+
+        &::after {
+            display: none;
+        }
+
+        &.swiper-button-disabled {
+            opacity: 0.3;
+        }
+    }
+    .swiper-button-prev {
+        left: 1vw;
+        transform: rotate(-135deg);
+    }
+
+    .swiper-button-next {
+        right: 1vw;
+        transform: rotate(45deg);
+    }
+
+    .slider-pagination {
+        position: static;
+        margin-top: 7vw;
+        padding: 2vw 0;
+
+        .swiper-pagination-bullet {
+            background-color: #bce4f0;
+            width: autoSize(22, $mobileViewport);
+            height: autoSize(22, $mobileViewport);
+            opacity: 1;
+            margin: 0 1.5vw;
+
+            &.swiper-pagination-bullet-active {
+                background-color: $blue3;
+                position: relative;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 220%;
+                    height: 220%;
+                    border: 2px solid $blue3;
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+}
+
+.which-contains-download-leaflet {
+    @include font($fontMedium, $fontWeightBold, $blue4, $mainFont);
+    grid-column: 2;
+    text-align: center;
+
+    @include media {
+        font-size: $fontMediumMobile;
+    }
+}
+
+/**
+*   Section last post
+*/
+.home-page-last-post {
+    padding-top: autoSize(110);
+    padding-bottom: autoSize(150);
+    position: relative;
+
+    @include media {
+        padding-top: autoSize(140, $mobileViewport);
+        padding-bottom: autoSize(150, $mobileViewport);
+    }
+
+    .home-page-last-post-bg-item {
+        position: absolute;
+        width: autoSize(298);
+        right: 0;
+        top: -10vw;
+    }
+}
+
+.home-page-last-post-header {
+    @include font($fontLarge, $fontWeightBold, $blue4, $mainFont);
+    text-align: center;
+
+    @include media {
+        font-size: $fontXLargeMobile;
+    }
+}
+
+.home-page-last-post-wrapper {
+    margin-top: autoSize(85);
+    display: grid;
+    grid-template-columns: $sideSpace auto $sideSpace;
+
+    @include media {
+        grid-template-columns: $sideSpaceMobile auto $sideSpaceMobile;
+    }
+}
+
+.home-page-last-post-inner {
+    grid-column: 2;
+    display: grid;
+    grid-template-columns: 6fr 6fr;
+    column-gap: autoSize(50);
+
+    @include media {
+        grid-template-columns: 12fr;
+        justify-items: center;
+    }
+}
+
+.home-page-last-post-info-wrapper {
+    padding: 1vw 0;
+
+    @include media {
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.home-page-last-post-image {
+    width: 100%;
+}
+
+.home-page-last-post-title {
+    text-decoration: none;
+
+    h2 {
+        @include font(autoSize(36), $fontWeightBold, $blue4, $mainFont, 1.3);
+        margin-bottom: 1vw;
+
+        @include media {
+            font-size: autoSize(54, $mobileViewport);
+            margin-top: autoSize(70, $mobileViewport);
+            margin-bottom: 3vw;
+        }
+    }
+}
+
+.home-page-last-post-excerpt {
+    p {
+        @include font($fontMedium, $fontWeightRegular, $blue4, $mainFont, 1.3);
+
+        @include media {
+            font-size: autoSize(38, $mobileViewport);
+        }
+    }
+}
+
+.home-page-last-post-button {
+    @include customButton($blue3, $light, $fontXSmall, $blue2, 70, 180);
+    margin-top: 2vw;
+
+    @include media {
+        width: autoSize(386, $mobileViewport);
+        height: autoSize(127, $mobileViewport);
+        font-size: autoSize(35, $mobileViewport);
+        margin-top: 5vw;
+    }
+}
+
+/**
+*   Section recipe
+*/
+.section-recipe {
+    position: relative;
+
+    .recipe-bg-item {
+        position: absolute;
+        width: autoSize(310);
+        height: autoSize(463);
+        left: 0;
+        bottom: 1vw;
+
+        @include media {
+            display: none;
+        }
+    }
+}
+
+.recipe-content {
+    background-color: $blue3;
+    display: grid;
+    grid-template-columns: $sideSpace minmax(auto, autoSize(760));
+    padding: autoSize(85) 0;
+
+    @include media {
+        background-color: $blue3;
+        grid-template-columns: $sideSpaceMobile auto $sideSpaceMobile;
+        padding: autoSize(140, $mobileViewport) 0 autoSize(212, $mobileViewport) 0;
+        text-align: center;
+        justify-items: center;
+    }
+}
+
+.recipe-header,
+.recipe-paragraph {
+    grid-column: 2;
+}
+
+.recipe-header {
+    @include font($fontLarge, $fontWeightBold, $light);
+    margin-bottom: autoSize(45);
+
+    @include media {
+        font-size: $fontXLargeMobile;
+        margin-bottom: autoSize(100, $mobileViewport);
+    }
+}
+
+.recipe-paragraph {
+    width: 83%;
+    p {
+        @include font($fontMedium, $fontWeightRegular, $light, $mainFont, 1.5);
+
+        @include media {
+            font-size: autoSize(38, $mobileViewport);
+            width: 100%;
+        }
+    }
+}
+
+.recipe-info {
+    display: grid;
+    grid-template-columns: $sideSpace auto $sideSpace;
+    padding: autoSize(45) 0;
+    background-color: $blue2;
+
+    @include media {
+        grid-template-columns: $sideSpaceMobile auto $sideSpaceMobile;
+        padding: autoSize(71, $mobileViewport) 0 autoSize(51, $mobileViewport) 0;
+    }
+}
+
+.recipe-info-paragraph {
+    grid-column: 2;
+    line-height: 1.4;
+
+    p {
+        @include font($fontSmall, $fontWeightRegular, $blue4, $mainFont, 1.7);
+
+        @include media {
+            font-size: $fontMediumMobile;
+            line-height: 1.4;
+        }
+    }
+}
+
+/**
+*   Section info
+*/
+.section-info {
+    display: grid;
+    grid-template-columns: $sideSpace auto $sideSpace;
+    padding: autoSize(50) 0;
+
+    @include media {
+        grid-template-columns: $sideSpaceMobile auto $sideSpaceMobile;
+        padding: autoSize(67, $mobileViewport) 0 autoSize(100, $mobileViewport) 0;
+    }
+}
+
+.section-info-paragraph {
+    grid-column: 2;
+    p {
+        @include font($fontXMedium, $fontWeightRegular, $blue4, $mainFont, 1.4);
+
+        @include media {
+            font-size: $fontLargeMobile;
+        }
+    }
+}

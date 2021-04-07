@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_company_logo_company_logos",
+  "info": {
+    "name": "companyLogo",
+    "icon": "sun"
+  },
+  "options": {},
+  "attributes": {
+    "url": {
+      "type": "string"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_recipe_recipes",
+  "info": {
+    "name": "recipe",
+    "icon": "balance-scale"
+  },
+  "options": {},
+  "attributes": {
+    "recipeTitle": {
+      "type": "string"
+    },
+    "recipeContent": {
+      "type": "richtext"
+    },
+    "recipeInfo": {
+      "type": "richtext"
+    }
+  }
+}
