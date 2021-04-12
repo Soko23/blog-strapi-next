@@ -12,3 +12,9 @@
 2. Run `npm i`
 3. Create `.env.development` file and paste: `NEXT_PUBLIC_API_URL=http://localhost:1337`
 4. Run `npm run dev` to start development server
+
+## TO DO
+
+- Move elements to separate components
+- Change SCSS to Styled Components
+- Add tests
